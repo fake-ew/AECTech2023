@@ -1,0 +1,55 @@
+{
+  "$schema": "https://hypar.io/Schemas/Function.json",
+  "id": "f8b59dbb-0105-4d7b-8a7e-a210d21541d4",
+  "name": "Let's build a house",
+  "display_name": "Let's build a house",
+  "description": "",
+  "language": "C#",
+  "model_dependencies": [
+    {
+      "autohide": false,
+      "name": "Lots",
+      "optional": false
+    }
+  ],
+  "input_schema": {
+    "type": "object",
+    "properties": {
+      "Height of the house": {
+        "maximum": 50,
+        "default": 50,
+        "type": "number",
+        "$hyparOrder": 0,
+        "$hyparUnitType": "length",
+        "minimum": 0
+      },
+      "Offset from boundary": {
+        "default": 0,
+        "type": "number",
+        "$hyparOrder": 1,
+        "$hyparUnitType": "length",
+        "$hyparStyle": "number"
+      },
+      "House Color": {
+        "$hyparOrder": 2,
+        "$ref": "https://hypar.io/Schemas/Geometry/Color.json",
+        "default": {
+          "Red": 0.3803921568627451,
+          "Alpha": 1,
+          "Blue": 0.13725490196078433,
+          "Green": 0.2784313725490196
+        }
+      }
+    }
+  },
+  "overrides": {},
+  "outputs": [],
+  "element_types": [
+    "https://schemas.hypar.io/House.json",
+    "https://schemas.hypar.io/Site.json"
+  ],
+  "repository_url": "",
+  "filters": {},
+  "last_updated": "2023-11-01T14:30:49.903312",
+  "cli_version": "1.10.0"
+}
