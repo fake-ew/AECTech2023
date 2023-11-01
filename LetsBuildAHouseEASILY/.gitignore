@@ -1,9 +1,0 @@
-
-bin/
-obj/
-*.glb
-output.json
-input.json
-.vs/
-server/
-test/Generated/
