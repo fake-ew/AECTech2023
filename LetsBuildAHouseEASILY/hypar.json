@@ -1,0 +1,72 @@
+{
+  "$schema": "https://hypar.io/Schemas/Function.json",
+  "id": "f3685d5e-2f45-4c20-bbce-43ceccaf202e",
+  "name": "Let's build a house EASILY",
+  "display_name": "Let's build a house EASILY",
+  "description": "",
+  "language": "C#",
+  "model_dependencies": [
+    {
+      "autohide": false,
+      "name": "Lots",
+      "optional": false
+    }
+  ],
+  "input_schema": {
+    "type": "object",
+    "properties": {
+      "Site offset": {
+        "multipleOf": 0.5,
+        "default": 1,
+        "maximum": 10,
+        "type": "number",
+        "$hyparOrder": 0,
+        "$hyparUnitType": "length",
+        "$hyparStyle": "number"
+      }
+    }
+  },
+  "overrides": {
+    "House": {
+      "targetType": "https://schemas.hypar.io/House.json",
+      "identity": {
+        "Add Id": {
+          "type": "string"
+        }
+      },
+      "paradigm": "edit",
+      "schema": {
+        "Perimeter": {
+          "$hyparOrder": 0,
+          "description": "The perimeter footprint of the house.",
+          "$ref": "https://schemas.hypar.io/Profile.json"
+        },
+        "Height": {
+          "description": "Heighest height of the house",
+          "type": "number",
+          "$hyparUnitType": "length",
+          "$hyparOrder": 1
+        },
+        "Color": {
+          "$hyparOrder": 2,
+          "description": "The color of the house.",
+          "$ref": "https://schemas.hypar.io/Color.json"
+        }
+      },
+      "verbs": {},
+      "behaviors": {
+        "quickAdd": true,
+        "add": true,
+        "remove": true
+      }
+    }
+  },
+  "outputs": [],
+  "element_types": [
+    "https://schemas.hypar.io/Site.json"
+  ],
+  "repository_url": "",
+  "filters": {},
+  "last_updated": "2023-11-01T21:13:54.011344",
+  "cli_version": "1.10.0"
+}
